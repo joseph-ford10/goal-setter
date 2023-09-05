@@ -1,13 +1,18 @@
 import React, { useState } from 'react'
 
 function TaskForm() {
-  const [formData, setFormData] = useState({
+  const [inputData, setInputData] = useState({
     task: '',
     units: '',
     endDate: '',
     unitsPerDay: '',
     startDate: '',
   })
+
+  const handleChange = (e) => {
+    const { name, value } = e.target
+    setInputData({ ...inputData, [name]: value })
+  }
 
   return <></>
 }
