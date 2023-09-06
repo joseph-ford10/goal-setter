@@ -48,7 +48,8 @@ function TaskForm() {
         </div>
         <div>
           <p>
-            How many of these units will it take in total to complete your task?
+            How many {inputData.unitsName} will it take in total to complete
+            your task?
           </p>
           <input
             type="number"
@@ -69,7 +70,7 @@ function TaskForm() {
           ></input>
         </div>
         <div>
-          <p>How many units per day can you complete?</p>
+          <p>How many {inputData.unitsName} per day can you do?</p>
           <input
             type="number"
             name="unitsPerDay"
