@@ -35,8 +35,8 @@ function TaskForm() {
         <div>
           <p>
             What kind of daily target do you want to set for completing your
-            task? You might set a number of minutes per day, a number of pages
-            per day, or something else
+            task? You might use a time unit like "minutes" or a different unit
+            like "pages".
           </p>
           <input
             type="text"
@@ -59,6 +59,7 @@ function TaskForm() {
           ></input>
         </div>
         <div>
+          <p>What is your end date?</p>
           <input
             type="date"
             name="endDate"
@@ -68,6 +69,7 @@ function TaskForm() {
           ></input>
         </div>
         <div>
+          <p>How many units per day can you complete?</p>
           <input
             type="number"
             name="unitsPerDay"
@@ -77,6 +79,7 @@ function TaskForm() {
           ></input>
         </div>
         <div>
+          <p>When do you want to start working towards your goal?</p>
           <input
             type="date"
             name="startDate"
