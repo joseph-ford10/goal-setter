@@ -2,6 +2,24 @@ import React, { useState } from 'react'
 import DoneButton from './DoneButton'
 
 function TaskForm() {
+  const calculation = () => {
+    if (targetType === 'targetEndDate') {
+      const startDate = new Date(inputData.startDate)
+      const endDate = new Date(inputData.endDate)
+      const timeDiff = endDate.getTime() - startDate.getTime()
+      const dayDiff = Math.abs(Math.floor(timeDiff / (1000 * 3600 * 24)))
+      console.log(dayDiff)
+    } else {
+      const startDate = new Date(inputData.startDate)
+      const totalDays = inputData.unitsNum / inputData.unitsPerDay
+      const roundedDays = Math.round(totalDays)
+      const endDate = new Date(startDate)
+      endDate.setDate(startDate.getDate() + roundedDays)
+      console.log(roundedDays)
+      console.log(endDate)
+    }
+  }
+
   const [inputData, setInputData] = useState({
     task: '',
     unitsNum: '',
@@ -32,7 +50,6 @@ function TaskForm() {
 
   return (
     <>
-      {targetType}
       <form>
         {formProgress > 0 && (
           <div>
