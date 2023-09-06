@@ -8,16 +8,26 @@ function TaskForm() {
       const endDate = new Date(inputData.endDate)
       const timeDiff = endDate.getTime() - startDate.getTime()
       const dayDiff = Math.abs(Math.floor(timeDiff / (1000 * 3600 * 24)))
-      console.log(dayDiff)
+      const finalNumber = Math.round(inputData.unitsNum / dayDiff)
+      console.log(
+        `To complete ${inputData.task}, you will need to complete ${finalNumber} ${inputData.unitsName} per day.`
+      )
     } else {
       const startDate = new Date(inputData.startDate)
       const totalDays = inputData.unitsNum / inputData.unitsPerDay
       const roundedDays = Math.round(totalDays)
       const endDate = new Date(startDate)
       endDate.setDate(startDate.getDate() + roundedDays)
-      console.log(roundedDays)
-      console.log(endDate)
+      console.log(
+        `At ${inputData.unitsPerDay} ${inputData.unitsName} per day, it will take you ${roundedDays} days to 
+        complete ${inputData.task}. This means you will finish on ${endDate}`
+      )
     }
+  }
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    calculation()
   }
 
   const [inputData, setInputData] = useState({
@@ -37,11 +47,6 @@ function TaskForm() {
     const { name, value } = e.target
     setInputData({ ...inputData, [name]: value })
     console.log(inputData)
-  }
-
-  const handleDone = (e) => {
-    e.preventDefault()
-    console.log('Hello world!')
   }
 
   const formProgressSetter = (num) => {
@@ -159,6 +164,7 @@ function TaskForm() {
             <DoneButton formProgressSetter={formProgressSetter} number={7} />
           </div>
         )}
+        <button onClick={handleSubmit}>Submit</button>
       </form>
     </>
   )
