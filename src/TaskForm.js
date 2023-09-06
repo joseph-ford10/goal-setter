@@ -13,6 +13,8 @@ function TaskForm() {
 
   const [formProgress, setFormProgress] = useState(1)
 
+  const [targetType, setTargetType] = useState('')
+
   const handleChange = (e) => {
     const { name, value } = e.target
     setInputData({ ...inputData, [name]: value })
@@ -30,6 +32,7 @@ function TaskForm() {
 
   return (
     <>
+      {targetType}
       <form>
         {formProgress > 0 && (
           <div>
@@ -82,7 +85,27 @@ function TaskForm() {
         )}
         {formProgress > 3 && (
           <div>
-            <p>What is your end date?</p>
+            <p>
+              Would you like to set a target end date or a daily progress
+              target?
+            </p>
+            <select
+              id="targetType"
+              name="targetType"
+              onChange={(e) => {
+                setFormProgress(5)
+                setTargetType(e.target.value)
+              }}
+            >
+              <option value="-">-</option>
+              <option value="targetEndDate">Target end date</option>
+              <option value="dailyTarget">Daily target</option>
+            </select>
+          </div>
+        )}
+        {formProgress > 4 && targetType === 'targetEndDate' && (
+          <div>
+            <p>What is your target end date?</p>
             <input
               type="date"
               name="endDate"
@@ -90,10 +113,10 @@ function TaskForm() {
               onChange={handleChange}
               aria-label="End date"
             ></input>
-            <DoneButton formProgressSetter={formProgressSetter} number={5} />
+            <DoneButton formProgressSetter={formProgressSetter} number={6} />
           </div>
         )}
-        {formProgress > 3 && (
+        {formProgress > 4 && targetType === 'dailyTarget' && (
           <div>
             <p>How many {inputData.unitsName} per day can you do?</p>
             <input
@@ -103,10 +126,10 @@ function TaskForm() {
               onChange={handleChange}
               aria-label="Units per day"
             ></input>
-            <DoneButton formProgressSetter={formProgressSetter} number={5} />
+            <DoneButton formProgressSetter={formProgressSetter} number={6} />
           </div>
         )}
-        {formProgress > 4 && (
+        {formProgress > 5 && (
           <div>
             <p>When do you want to start working towards your goal?</p>
             <input
@@ -116,7 +139,7 @@ function TaskForm() {
               onChange={handleChange}
               aria-label="Start date"
             ></input>
-            <DoneButton formProgressSetter={formProgressSetter} number={6} />
+            <DoneButton formProgressSetter={formProgressSetter} number={7} />
           </div>
         )}
       </form>
