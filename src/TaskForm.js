@@ -19,47 +19,47 @@ function TaskForm() {
   return (
     <>
       <form>
-        <label>Task:</label>
         <input
           type="text"
           name="task"
           value={inputData.task}
           onChange={handleChange}
+          aria-label="Task"
         ></input>
-        <label>Unit number:</label>
         <input
           type="number"
           name="unitsNum"
           value={inputData.unitsNum}
           onChange={handleChange}
+          aria-label="Number of units:"
         ></input>
-        <label>Units name:</label>
         <input
           type="text"
           name="unitsName"
           value={inputData.unitsName}
           onChange={handleChange}
+          aria-label="Name of units"
         ></input>
-        <label>End date:</label>
         <input
           type="date"
           name="endDate"
           value={inputData.endDate}
           onChange={handleChange}
+          aria-label="End date"
         ></input>
-        <label>Units per day:</label>
         <input
           type="number"
           name="unitsPerDay"
           value={inputData.unitsPerDay}
           onChange={handleChange}
+          aria-label="Units per day"
         ></input>
-        <label>Start date:</label>
         <input
           type="date"
           name="startDate"
           value={inputData.startDate}
           onChange={handleChange}
+          aria-label="Start date"
         ></input>
       </form>
     </>
