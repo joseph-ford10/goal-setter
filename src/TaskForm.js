@@ -1,5 +1,12 @@
 import React, { useState } from 'react'
 import DoneButton from './DoneButton'
+import TaskNameInput from './TaskNameInput'
+import UnitTypeInput from './UnitTypeInput'
+import TotalUnitsInput from './TotalUnitsInput'
+import TargetTypeInput from './TargetTypeInput'
+import EndDateInput from './EndDateInput'
+import DailyTargetInput from './DailyTargetInput'
+import StartDateInput from './StartDateInput'
 
 function TaskForm() {
   const calculation = () => {
@@ -56,113 +63,53 @@ function TaskForm() {
   return (
     <>
       <form>
-        {formProgress > 0 && (
-          <div>
-            <p>
-              What is the name of your task? This might be the name of a project
-              you want to complete, a book you want to read, or something else.
-            </p>
-            <input
-              type="text"
-              name="task"
-              value={inputData.task}
-              onChange={handleChange}
-              aria-label="Task"
-            ></input>
-            <DoneButton formProgressSetter={formProgressSetter} number={2} />
-          </div>
+        {formProgress === 1 && (
+          <TaskNameInput
+            inputData={inputData}
+            handleChange={handleChange}
+            formProgressSetter={formProgressSetter}
+          />
         )}
-        {formProgress > 1 && (
-          <div>
-            <p>
-              What kind of daily target do you want to set for completing your
-              task? You might use a time unit like "minutes" or a different unit
-              like "pages".
-            </p>
-            <input
-              type="text"
-              name="unitsName"
-              value={inputData.unitsName}
-              onChange={handleChange}
-              aria-label="Name of units"
-            ></input>
-            <DoneButton formProgressSetter={formProgressSetter} number={3} />
-          </div>
+        {formProgress === 2 && (
+          <UnitTypeInput
+            inputData={inputData}
+            handleChange={handleChange}
+            formProgressSetter={formProgressSetter}
+          />
         )}
-        {formProgress > 2 && (
-          <div>
-            <p>
-              How many {inputData.unitsName} will it take in total to complete
-              your task?
-            </p>
-            <input
-              type="number"
-              name="unitsNum"
-              value={inputData.unitsNum}
-              onChange={handleChange}
-              aria-label="Number of units:"
-            ></input>
-            <DoneButton formProgressSetter={formProgressSetter} number={4} />
-          </div>
+        {formProgress === 3 && (
+          <TotalUnitsInput
+            inputData={inputData}
+            handleChange={handleChange}
+            formProgressSetter={formProgressSetter}
+          />
         )}
-        {formProgress > 3 && (
-          <div>
-            <p>
-              Would you like to set a target end date or a daily progress
-              target?
-            </p>
-            <select
-              id="targetType"
-              name="targetType"
-              onChange={(e) => {
-                setFormProgress(5)
-                setTargetType(e.target.value)
-              }}
-            >
-              <option value="-">-</option>
-              <option value="targetEndDate">Target end date</option>
-              <option value="dailyTarget">Daily target</option>
-            </select>
-          </div>
+        {formProgress === 4 && (
+          <TargetTypeInput
+            formProgressSetter={formProgressSetter}
+            setTargetType={setTargetType}
+          />
         )}
-        {formProgress > 4 && targetType === 'targetEndDate' && (
-          <div>
-            <p>What is your target end date?</p>
-            <input
-              type="date"
-              name="endDate"
-              value={inputData.endDate}
-              onChange={handleChange}
-              aria-label="End date"
-            ></input>
-            <DoneButton formProgressSetter={formProgressSetter} number={6} />
-          </div>
+        {formProgress === 5 && targetType === 'targetEndDate' && (
+          <EndDateInput
+            inputData={inputData}
+            handleChange={handleChange}
+            formProgressSetter={formProgressSetter}
+          />
         )}
-        {formProgress > 4 && targetType === 'dailyTarget' && (
-          <div>
-            <p>How many {inputData.unitsName} per day can you do?</p>
-            <input
-              type="number"
-              name="unitsPerDay"
-              value={inputData.unitsPerDay}
-              onChange={handleChange}
-              aria-label="Units per day"
-            ></input>
-            <DoneButton formProgressSetter={formProgressSetter} number={6} />
-          </div>
+        {formProgress === 5 && targetType === 'dailyTarget' && (
+          <DailyTargetInput
+            inputData={inputData}
+            handleChange={handleChange}
+            formProgressSetter={formProgressSetter}
+          />
         )}
-        {formProgress > 5 && (
-          <div>
-            <p>When do you want to start working towards your goal?</p>
-            <input
-              type="date"
-              name="startDate"
-              value={inputData.startDate}
-              onChange={handleChange}
-              aria-label="Start date"
-            ></input>
-            <DoneButton formProgressSetter={formProgressSetter} number={7} />
-          </div>
+        {formProgress === 6 && (
+          <StartDateInput
+            inputData={inputData}
+            handleChange={handleChange}
+            formProgressSetter={formProgressSetter}
+          />
         )}
         <button onClick={handleSubmit}>Submit</button>
       </form>
