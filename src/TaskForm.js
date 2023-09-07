@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import DoneButton from './DoneButton'
 import TaskNameInput from './TaskNameInput'
 import UnitTypeInput from './UnitTypeInput'
 import TotalUnitsInput from './TotalUnitsInput'
@@ -7,6 +6,7 @@ import TargetTypeInput from './TargetTypeInput'
 import EndDateInput from './EndDateInput'
 import DailyTargetInput from './DailyTargetInput'
 import StartDateInput from './StartDateInput'
+import SubmitScreen from './SubmitScreen'
 
 function TaskForm() {
   const calculation = () => {
@@ -111,7 +111,13 @@ function TaskForm() {
             formProgressSetter={formProgressSetter}
           />
         )}
-        <button onClick={handleSubmit}>Submit</button>
+        {formProgress === 7 && (
+          <SubmitScreen
+            targetType={targetType}
+            inputData={inputData}
+            handleSubmt={handleSubmit}
+          />
+        )}
       </form>
     </>
   )
