@@ -1,9 +1,8 @@
 import React from 'react'
 
-function Title() {
+function Home() {
   return (
     <>
-      <h1>Goal Setter</h1>
       <p>
         Welcome to Goal Setter. Goal Setter is a motivational tool for
         completing projects or tasks. You can either:
@@ -27,4 +26,4 @@ function Title() {
   )
 }
 
-export default Title
+export default Home
