@@ -10,29 +10,6 @@ import SubmitScreen from './SubmitScreen'
 import Results from './Results'
 
 function TaskForm() {
-  const calculation = () => {
-    if (targetType === 'targetEndDate') {
-      const startDate = new Date(inputData.startDate)
-      const endDate = new Date(inputData.endDate)
-      const timeDiff = endDate.getTime() - startDate.getTime()
-      const dayDiff = Math.abs(Math.floor(timeDiff / (1000 * 3600 * 24)))
-      const finalNumber = Math.round(inputData.unitsNum / dayDiff)
-      console.log(
-        `To complete ${inputData.task}, you will need to complete ${finalNumber} ${inputData.unitsName} per day.`
-      )
-    } else {
-      const startDate = new Date(inputData.startDate)
-      const totalDays = inputData.unitsNum / inputData.unitsPerDay
-      const roundedDays = Math.round(totalDays)
-      const endDate = new Date(startDate)
-      endDate.setDate(startDate.getDate() + roundedDays)
-      console.log(
-        `At ${inputData.unitsPerDay} ${inputData.unitsName} per day, it will take you ${roundedDays} days to 
-        complete ${inputData.task}. This means you will finish on ${endDate}`
-      )
-    }
-  }
-
   const handleSubmit = (e) => {
     e.preventDefault()
     setFormProgress(8)
