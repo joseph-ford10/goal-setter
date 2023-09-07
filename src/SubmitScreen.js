@@ -1,6 +1,4 @@
-import DoneButton from './DoneButton'
-
-function SubmitScreen({ inputData, formProgressSetter, targetType }) {
+function SubmitScreen({ inputData, targetType, handleSubmit }) {
   return (
     <div>
       <h2>Summary</h2>
@@ -20,7 +18,9 @@ function SubmitScreen({ inputData, formProgressSetter, targetType }) {
         )}
         <li>Start date: {inputData.startDate}</li>
       </ul>
-      <DoneButton formProgressSetter={formProgressSetter} number={8} />
+      <button type="submit" onClick={handleSubmit}>
+        Submit
+      </button>
     </div>
   )
 }

@@ -115,7 +115,7 @@ function TaskForm() {
           <SubmitScreen
             targetType={targetType}
             inputData={inputData}
-            handleSubmt={handleSubmit}
+            handleSubmit={handleSubmit}
             formProgressSetter={formProgressSetter}
           />
         )}
