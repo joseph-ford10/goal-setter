@@ -1,6 +1,6 @@
-import React from 'react'
+import DoneButton from './DoneButton'
 
-function SubmitScreen({ inputData, handleSubmit, targetType }) {
+function SubmitScreen({ inputData, formProgressSetter, targetType }) {
   return (
     <div>
       <h2>Summary</h2>
@@ -20,7 +20,7 @@ function SubmitScreen({ inputData, handleSubmit, targetType }) {
         )}
         <li>Start date: {inputData.startDate}</li>
       </ul>
-      <button onClick={handleSubmit}>Submit</button>
+      <DoneButton formProgressSetter={formProgressSetter} number={8} />
     </div>
   )
 }

@@ -7,6 +7,7 @@ import EndDateInput from './EndDateInput'
 import DailyTargetInput from './DailyTargetInput'
 import StartDateInput from './StartDateInput'
 import SubmitScreen from './SubmitScreen'
+import Results from './Results'
 
 function TaskForm() {
   const calculation = () => {
@@ -34,7 +35,7 @@ function TaskForm() {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    calculation()
+    setFormProgress(8)
   }
 
   const [inputData, setInputData] = useState({
@@ -47,7 +48,6 @@ function TaskForm() {
   })
 
   const [formProgress, setFormProgress] = useState(1)
-
   const [targetType, setTargetType] = useState('')
 
   const handleChange = (e) => {
@@ -116,6 +116,14 @@ function TaskForm() {
             targetType={targetType}
             inputData={inputData}
             handleSubmt={handleSubmit}
+            formProgressSetter={formProgressSetter}
+          />
+        )}
+        {formProgress === 8 && (
+          <Results
+            inputData={inputData}
+            targetType={targetType}
+            formProgressSetter={formProgressSetter}
           />
         )}
       </form>
