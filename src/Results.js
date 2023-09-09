@@ -1,6 +1,5 @@
 import React from 'react'
 import dayjs from 'dayjs'
-import DoneButton from './DoneButton'
 
 function Results({ inputData, setInputData, targetType, formProgressSetter }) {
   const calculation = () => {
@@ -44,7 +43,7 @@ function Results({ inputData, setInputData, targetType, formProgressSetter }) {
           })
         }}
       >
-        Enter new task
+        Start Again
       </button>
     </div>
   )
