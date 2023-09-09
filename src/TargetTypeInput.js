@@ -6,7 +6,7 @@ function targetTypeInput({ formProgressSetter, setTargetType }) {
     <div className="fadeIn">
       <p>Would you like to set a target end date or a daily progress target?</p>
       <div className="radioButtons">
-        <label className="radioItem">
+        <label className="radioItem1">
           <input
             type="radio"
             name="targetType"
@@ -15,7 +15,7 @@ function targetTypeInput({ formProgressSetter, setTargetType }) {
           ></input>
           <div>Target End Date</div>
         </label>
-        <label className="radioItem">
+        <label className="radioItem2">
           <input
             type="radio"
             name="targetType"
