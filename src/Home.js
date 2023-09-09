@@ -11,7 +11,7 @@ function Home() {
 
   return (
     <>
-      <section>
+      <section className="introText">
         {introText === 1 && (
           <div className="fadeIn">
             <p>Welcome to Reading Well.</p>
