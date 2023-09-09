@@ -101,6 +101,7 @@ function TaskForm() {
             inputData={inputData}
             targetType={targetType}
             formProgressSetter={formProgressSetter}
+            setInputData={setInputData}
           />
         )}
       </form>
