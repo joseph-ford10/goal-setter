@@ -3,7 +3,7 @@ import DoneButton from './DoneButton'
 
 function DailyTargetInput({ inputData, handleChange, formProgressSetter }) {
   return (
-    <div>
+    <div className="fadeIn">
       <p>How many {inputData.unitsName} per day can you do?</p>
       <input
         type="number"
@@ -12,7 +12,9 @@ function DailyTargetInput({ inputData, handleChange, formProgressSetter }) {
         onChange={handleChange}
         aria-label="Units per day"
       ></input>
-      <DoneButton formProgressSetter={formProgressSetter} number={6} />
+      <div>
+        <DoneButton formProgressSetter={formProgressSetter} number={6} />
+      </div>
     </div>
   )
 }

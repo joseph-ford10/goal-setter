@@ -22,7 +22,12 @@ function Results({ inputData, targetType }) {
     }
   }
 
-  return <p>{calculation()}</p>
+  return (
+    <div className="fadeIn">
+      <p>{calculation()}</p>
+      <p>Isn't that motivating?</p>
+    </div>
+  )
 }
 
 export default Results

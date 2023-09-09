@@ -3,10 +3,11 @@ import DoneButton from './DoneButton'
 
 function TaskNameInput({ inputData, handleChange, formProgressSetter }) {
   return (
-    <div>
+    <div className="fadeIn">
+      <p>What is the name of your task?</p>{' '}
       <p>
-        What is the name of your task? This might be the name of a project you
-        want to complete, a book you want to read, or something else.
+        This might be the name of a project you want to complete, a book you
+        want to read, or something else.
       </p>
       <input
         type="text"
@@ -15,7 +16,9 @@ function TaskNameInput({ inputData, handleChange, formProgressSetter }) {
         onChange={handleChange}
         aria-label="Task"
       ></input>
-      <DoneButton formProgressSetter={formProgressSetter} number={2} />
+      <div>
+        <DoneButton formProgressSetter={formProgressSetter} number={2} />
+      </div>
     </div>
   )
 }

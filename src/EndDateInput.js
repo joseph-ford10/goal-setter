@@ -3,7 +3,7 @@ import DoneButton from './DoneButton'
 
 function EndDateInput({ inputData, handleChange, formProgressSetter }) {
   return (
-    <div>
+    <div className="fadeIn">
       <p>What is your target end date?</p>
       <input
         type="date"
@@ -12,7 +12,9 @@ function EndDateInput({ inputData, handleChange, formProgressSetter }) {
         onChange={handleChange}
         aria-label="End date"
       ></input>
-      <DoneButton formProgressSetter={formProgressSetter} number={6} />
+      <div>
+        <DoneButton formProgressSetter={formProgressSetter} number={6} />
+      </div>
     </div>
   )
 }

@@ -1,26 +1,38 @@
 function SubmitScreen({ inputData, targetType, handleSubmit }) {
   return (
-    <div>
+    <div className="fadeIn">
       <h2>Summary</h2>
-      <ul>
-        <li>Task name: {inputData.task}</li>
-        <li>Divided into: {inputData.unitsName}</li>
+      <ul className="summaryList">
         <li>
-          Total number of {inputData.unitsName}: {inputData.unitsNum}
+          <strong>Task name:</strong> {inputData.task}
+        </li>
+        <li>
+          <strong>Divided into:</strong> {inputData.unitsName}
+        </li>
+        <li>
+          <strong>Total number of {inputData.unitsName}:</strong>{' '}
+          {inputData.unitsNum}
         </li>
         {targetType === 'dailyTarget' && (
           <li>
-            Daily target: {inputData.unitsPerDay} {inputData.unitsName}
+            <strong>Daily target:</strong> {inputData.unitsPerDay}{' '}
+            {inputData.unitsName}
           </li>
         )}
         {targetType === 'targetEndDate' && (
-          <li>Target end date: {inputData.endDate}</li>
+          <li>
+            <strong>Target end date:</strong> {inputData.endDate}
+          </li>
         )}
-        <li>Start date: {inputData.startDate}</li>
+        <li>
+          <strong>Start date:</strong> {inputData.startDate}
+        </li>
       </ul>
-      <button type="submit" onClick={handleSubmit}>
-        Submit
-      </button>
+      <div>
+        <button type="submit" onClick={handleSubmit}>
+          Submit
+        </button>
+      </div>
     </div>
   )
 }

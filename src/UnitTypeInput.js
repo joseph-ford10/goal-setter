@@ -3,9 +3,11 @@ import DoneButton from './DoneButton'
 
 function UnitTypeInput({ inputData, handleChange, formProgressSetter }) {
   return (
-    <div>
+    <div className="fadeIn">
       <p>
         What kind of daily target do you want to set for completing your task?
+      </p>
+      <p>
         You might use a time unit like "minutes" or a different unit like
         "pages".
       </p>
@@ -16,7 +18,9 @@ function UnitTypeInput({ inputData, handleChange, formProgressSetter }) {
         onChange={handleChange}
         aria-label="Name of units"
       ></input>
-      <DoneButton formProgressSetter={formProgressSetter} number={3} />
+      <div>
+        <DoneButton formProgressSetter={formProgressSetter} number={3} />
+      </div>
     </div>
   )
 }
