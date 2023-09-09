@@ -6,15 +6,9 @@ import TargetTypeInput from './TargetTypeInput'
 import EndDateInput from './EndDateInput'
 import DailyTargetInput from './DailyTargetInput'
 import StartDateInput from './StartDateInput'
-import SubmitScreen from './SubmitScreen'
 import Results from './Results'
 
 function TaskForm() {
-  const handleSubmit = (e) => {
-    e.preventDefault()
-    setFormProgress(8)
-  }
-
   const [inputData, setInputData] = useState({
     task: '',
     unitsNum: '',
