@@ -6,7 +6,7 @@ function UnitTypeInput({ inputData, handleChange, formProgressSetter }) {
     <div className="fadeIn">
       <p>
         What kind of daily target do you want to set for completing{' '}
-        {inputData.task}?
+        <em>{inputData.task}</em>?
       </p>
       <input
         type="text"

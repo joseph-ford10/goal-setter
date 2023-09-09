@@ -89,14 +89,6 @@ function TaskForm() {
           />
         )}
         {formProgress === 7 && (
-          <SubmitScreen
-            targetType={targetType}
-            inputData={inputData}
-            handleSubmit={handleSubmit}
-            formProgressSetter={formProgressSetter}
-          />
-        )}
-        {formProgress === 8 && (
           <Results
             inputData={inputData}
             targetType={targetType}

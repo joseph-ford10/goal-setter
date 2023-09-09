@@ -6,7 +6,7 @@ function TotalUnitsInput({ inputData, handleChange, formProgressSetter }) {
     <div className="fadeIn">
       <p>
         How many {inputData.unitsName} will it take in total to complete{' '}
-        {inputData.task}?
+        <em>{inputData.task}</em>?
       </p>
       <input
         type="number"
