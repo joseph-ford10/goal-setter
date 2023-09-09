@@ -5,11 +5,8 @@ function UnitTypeInput({ inputData, handleChange, formProgressSetter }) {
   return (
     <div className="fadeIn">
       <p>
-        What kind of daily target do you want to set for completing your task?
-      </p>
-      <p>
-        You might use a time unit like "minutes" or a different unit like
-        "pages".
+        What kind of daily target do you want to set for completing{' '}
+        {inputData.task}?
       </p>
       <input
         type="text"
@@ -17,6 +14,7 @@ function UnitTypeInput({ inputData, handleChange, formProgressSetter }) {
         value={inputData.unitsName}
         onChange={handleChange}
         aria-label="Name of units"
+        placeholder="e.g. pages, minutes, locations"
       ></input>
       <div>
         <DoneButton formProgressSetter={formProgressSetter} number={3} />

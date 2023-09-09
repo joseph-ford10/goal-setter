@@ -5,8 +5,8 @@ function TotalUnitsInput({ inputData, handleChange, formProgressSetter }) {
   return (
     <div className="fadeIn">
       <p>
-        How many {inputData.unitsName} will it take in total to complete your
-        task?
+        How many {inputData.unitsName} will it take in total to complete{' '}
+        {inputData.task}?
       </p>
       <input
         type="number"
@@ -14,6 +14,7 @@ function TotalUnitsInput({ inputData, handleChange, formProgressSetter }) {
         value={inputData.unitsNum}
         onChange={handleChange}
         aria-label="Number of units:"
+        placeholder="enter a number"
       ></input>
       <div>
         <DoneButton formProgressSetter={formProgressSetter} number={4} />

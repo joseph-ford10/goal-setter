@@ -1,7 +1,7 @@
 import React from 'react'
 
 function Heading() {
-  return <h1>Goal Setter</h1>
+  return <h1>Reading Well</h1>
 }
 
 export default Heading

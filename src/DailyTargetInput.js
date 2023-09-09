@@ -4,7 +4,7 @@ import DoneButton from './DoneButton'
 function DailyTargetInput({ inputData, handleChange, formProgressSetter }) {
   return (
     <div className="fadeIn">
-      <p>How many {inputData.unitsName} per day can you do?</p>
+      <p>How many {inputData.unitsName} per day can you read?</p>
       <input
         type="number"
         name="unitsPerDay"

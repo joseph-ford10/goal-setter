@@ -4,17 +4,14 @@ import DoneButton from './DoneButton'
 function TaskNameInput({ inputData, handleChange, formProgressSetter }) {
   return (
     <div className="fadeIn">
-      <p>What is the name of your task?</p>{' '}
-      <p>
-        This might be the name of a project you want to complete, a book you
-        want to read, or something else.
-      </p>
+      <p>What is the name of the book you want to read?</p>{' '}
       <input
         type="text"
         name="task"
         value={inputData.task}
         onChange={handleChange}
         aria-label="Task"
+        placeholder="e.g. Lord of the Rings"
       ></input>
       <div>
         <DoneButton formProgressSetter={formProgressSetter} number={2} />

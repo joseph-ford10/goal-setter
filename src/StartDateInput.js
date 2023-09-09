@@ -4,7 +4,7 @@ import DoneButton from './DoneButton'
 function StartDateInput({ inputData, handleChange, formProgressSetter }) {
   return (
     <div className="fadeIn">
-      <p>When do you want to start working towards your goal?</p>
+      <p>When will you be starting {inputData.task}?</p>
       <input
         type="date"
         name="startDate"

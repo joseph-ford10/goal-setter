@@ -4,7 +4,7 @@ import DoneButton from './DoneButton'
 function targetTypeInput({ formProgressSetter, setTargetType }) {
   return (
     <div className="fadeIn">
-      <p>Would you like to set a target end date or a daily progress goal?</p>
+      <p>Would you like to set an end date or a daily target?</p>
       <div className="radioButtons">
         <label className="radioItem1">
           <input
