@@ -14,7 +14,7 @@ function Home() {
       <section>
         {introText === 1 && (
           <div className="fadeIn">
-            <p>Welcome to Goal Setter.</p>
+            <p>Welcome to Reading Well.</p>
             <button className="nextButton" onClick={() => setIntroText(2)}>
               Next
             </button>
@@ -23,8 +23,7 @@ function Home() {
         {introText === 2 && (
           <div className="fadeIn">
             <p>
-              Goal Setter is a motivational tool for completing projects or
-              tasks. It works in two ways.
+              Reading Well is a motivational tool for setting reading goals.
             </p>
             <button className="nextButton" onClick={() => setIntroText(3)}>
               Next
@@ -34,8 +33,8 @@ function Home() {
         {introText === 3 && (
           <div className="fadeIn">
             <p>
-              You can set a daily target and have Goal Setter tell you how long
-              it will take you to complete your task if you stick to that
+              You can set a daily target and have Reading Well tell you how long
+              it will take you to complete your book if you stick to that
               target.
             </p>
             <button className="nextButton" onClick={() => setIntroText(4)}>
@@ -46,7 +45,7 @@ function Home() {
         {introText === 4 && (
           <div className="fadeIn">
             <p>
-              Or you can set a completion date and have Goal Setter tell you
+              Or you can set a completion date and have Reading Well tell you
               what your daily target should be if you want to be done in time.
             </p>
             <button className="nextButton" onClick={() => setIntroText(5)}>
@@ -58,7 +57,7 @@ function Home() {
           <div className="fadeIn">
             <p>
               Sound good? All you have to do is enter some basic information
-              about your project or task. Click below to get started.
+              about your book and daily target. Click below to get started.
             </p>
             <button className="nextButton" onClick={pageChange}>
               Next

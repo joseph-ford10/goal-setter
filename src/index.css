@@ -4,11 +4,11 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #1c39bb;
-  color: white;
+  background-color: #FAF9F6;
+  color: #474543;
   font-size: 2rem;
   text-align: center;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
   margin: 0;
   padding: 0;
 }
@@ -21,19 +21,17 @@ code {
 
 button {
   border-style: solid;
-  border-color: white;
-  background-color: #1c39bb;
-  color: white;
+  border-color: black;
+  background-color: white;
+  color: #474543;
   cursor: pointer;
   border-radius: 5px;
   padding: 1rem 2rem;
   font-weight: bold;
   font-size: 1.2rem;
-  background-image: linear-gradient(to bottom, #1c39bb, #1c41bb )
 }
 
 .fadeIn {
-color: white;
 text-align: center;
 opacity: 0;
 animation: fadeIn 1s ease-in-out forwards;
@@ -77,10 +75,11 @@ input {
 }
 
 h1 {
-  font-family: Georgia;
-  background-color: #2A4BDF;
+  font-family: Garamond;
   margin-top: 0;
   padding: 1rem;
+  border-bottom-style: solid;
+  border-bottom-color: black;
 }
 
 form {
