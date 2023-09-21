@@ -62,9 +62,14 @@ function App() {
               key={key}
               className="dot"
               style={{ backgroundColor: 'black' }}
+              onClick={() => setCarousel(Number(key))}
             ></div>
           ) : (
-            <div key={key} className="dot"></div>
+            <div
+              key={key}
+              className="dot"
+              onClick={() => setCarousel(Number(key))}
+            ></div>
           )
         )}
       </div>
