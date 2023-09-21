@@ -20,7 +20,7 @@ function App() {
   }
 
   return (
-    <div className="App">
+    <div className="App fadeIn">
       <Header />
       <h2 className="welcomeMessage">Welcome</h2>
       <div className="bookImage">
