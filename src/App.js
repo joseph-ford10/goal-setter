@@ -44,6 +44,9 @@ function App() {
         <div className="dot"></div>
         <div className="dot"></div>
       </div>
+      <section className="startButton">
+        <button>Get Started</button>
+      </section>
       <div className="bookStackImage">
         <img
           src={bookStack}
