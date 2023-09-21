@@ -7,8 +7,18 @@ import openBook from './open-book.png'
 import rightArrow from './next.png'
 import leftArrow from './back.png'
 import bookStack from './bookStack.png'
+import { useState } from 'react'
 
 function App() {
+  const [carousel, setCarousel] = useState(1)
+
+  const carouselText = {
+    1: 'ReadingWell is a simple app for making and sticking to reading goals.',
+    2: 'You can set a daily page target and have ReadingWell tell you when you will complete the book based on that target.',
+    3: 'Or you can set a target completion date and have ReadingWell tell you what your daily target should be.',
+    4: 'Sound good? Click below to get started.',
+  }
+
   return (
     <div className="App">
       <Header />
@@ -18,31 +28,45 @@ function App() {
       </div>
       <div className="boxContainer">
         <div className="introBox">
-          <img
-            src={leftArrow}
-            alt="Left-pointing arrow"
-            width="20"
-            height="20"
-            className="leftArrow"
-          ></img>
-          <p className="introText">
-            ReadingWell is a simple app for making and sticking to reading
-            goals.
-          </p>
-          <img
-            src={rightArrow}
-            alt="Right-pointing arrow"
-            width="20"
-            height="20"
-            className="rightArrow"
-          ></img>
+          <div style={{ width: '20px', height: '20px' }}>
+            {carousel !== 1 && (
+              <img
+                src={leftArrow}
+                alt="Left-pointing arrow"
+                width="20"
+                height="20"
+                className="leftArrow"
+                onClick={() => setCarousel(carousel - 1)}
+              ></img>
+            )}
+          </div>
+          <p className="introText">{carouselText[carousel]}</p>
+          <div style={{ width: '20px', height: '20px' }}>
+            {carousel !== 4 && (
+              <img
+                src={rightArrow}
+                alt="Right-pointing arrow"
+                width="20"
+                height="20"
+                className="rightArrow"
+                onClick={() => setCarousel(carousel + 1)}
+              ></img>
+            )}
+          </div>
         </div>
       </div>
       <div className="carouselDots">
-        <div className="dot"></div>
-        <div className="dot"></div>
-        <div className="dot"></div>
-        <div className="dot"></div>
+        {Object.keys(carouselText).map((key) =>
+          Number(key) === carousel ? (
+            <div
+              key={key}
+              className="dot"
+              style={{ backgroundColor: 'black' }}
+            ></div>
+          ) : (
+            <div key={key} className="dot"></div>
+          )
+        )}
       </div>
       <section className="startButton">
         <button>Get Started</button>
