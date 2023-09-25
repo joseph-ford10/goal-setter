@@ -1,10 +1,11 @@
 import './App.css'
-import openBook from './open-book.png'
+
 import rightArrow from './next.png'
 import leftArrow from './back.png'
 import bookStack from './bookStack.png'
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
+import TopIcon from './TopIcon'
 
 function Welcome() {
   const [carousel, setCarousel] = useState(1)
@@ -25,9 +26,6 @@ function Welcome() {
   return (
     <div className="App fadeIn">
       <h2 className="welcomeMessage">Welcome</h2>
-      <div className="bookImage">
-        <img src={openBook} alt="A book icon" width="40" height="40"></img>
-      </div>
       <div className="boxContainer">
         <div className="introBox">
           <div style={{ width: '20px', height: '20px' }}>

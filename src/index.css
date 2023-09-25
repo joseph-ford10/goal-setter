@@ -119,6 +119,7 @@ h1 {
 .welcomeMessage {
   font-size: 3rem;
   text-align: center;
+  margin: 0;
 }
 
 body {
@@ -141,7 +142,6 @@ header {
 }
 
 .introBox {
-  margin-top: 1.75rem;
   width: 75vw;
   height: 17vh;
   display: flex;
@@ -202,7 +202,7 @@ button {
   border-width: 0.2rem;
   border-color: black;
   background-color:none;
-  margin-bottom: 2.75rem;
+  margin-bottom: 1rem;
   padding: 1rem;
   font-family: 'PT Serif', 'serif';
   font-weight: 700;
@@ -229,4 +229,9 @@ button {
     100% {
       opacity: 1;
     }
+  }
+
+  .formContainer {
+    display: flex;
+    justify-content: space-evenly;
   }
