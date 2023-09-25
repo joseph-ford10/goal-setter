@@ -1,10 +1,10 @@
 import './App.css'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import openBook from './open-book.png'
 import rightArrow from './next.png'
 import leftArrow from './back.png'
 import bookStack from './bookStack.png'
 import { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 
 function Welcome() {
   const [carousel, setCarousel] = useState(1)
@@ -14,6 +14,12 @@ function Welcome() {
     2: 'You can set a daily page target and have ReadingWell tell you when you will complete the book based on that target.',
     3: 'Or you can set a target completion date and have ReadingWell tell you what your daily target should be.',
     4: 'Sound good? Click below to get started.',
+  }
+
+  const navigate = useNavigate()
+
+  const goToForm = () => {
+    navigate('/form')
   }
 
   return (
@@ -70,7 +76,7 @@ function Welcome() {
         )}
       </div>
       <section className="startButton">
-        <button>Get Started</button>
+        <button onClick={goToForm}>Get Started</button>
       </section>
       <div className="bookStackImage">
         <img
