@@ -20,7 +20,7 @@ function Welcome() {
   const navigate = useNavigate()
 
   const goToForm = () => {
-    navigate('/form')
+    navigate('form/page1')
   }
 
   return (
@@ -73,7 +73,7 @@ function Welcome() {
           )
         )}
       </div>
-      <section className="startButton">
+      <section className="buttonContainer">
         <button onClick={goToForm}>Get Started</button>
       </section>
       <div className="bookStackImage">

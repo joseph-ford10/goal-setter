@@ -191,7 +191,7 @@ footer {
   bottom: 0;
 }
 
-.startButton {
+.buttonContainer {
   display: flex;
   justify-content: center;
 }
@@ -233,5 +233,26 @@ button {
 
   .formContainer {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .formText {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: 75vw;
+    font-size: 1.06rem;
+  }
+
+  .inputContainer {
+    display: flex;
+    justify-content: center;
+  }
+
+  input {
+    width: 75vw;
+    height: 10vw;
+    text-align: center;
+    font-size: 1.06rem;
   }

@@ -1,9 +1,10 @@
 import './App.css'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Header from './Header'
+import TopIcon from './TopIcon'
 import Welcome from './Welcome'
 import BookForm from './BookForm'
-import TopIcon from './TopIcon'
+import Form1 from './Form1'
 
 function App() {
   return (
@@ -13,7 +14,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Welcome />} />
-          <Route path="/form" element={<BookForm />} />
+          <Route path="form/*" element={<BookForm />} />
         </Routes>
       </BrowserRouter>
     </>
