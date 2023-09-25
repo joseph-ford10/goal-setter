@@ -143,7 +143,7 @@ header {
 
 .introBox {
   width: 75vw;
-  height: 17vh;
+  height: 20vh;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
