@@ -71,7 +71,7 @@ const Summary = ({ targetType, inputData }) => {
         </div>
       </div>
       <section className="buttonContainer">
-        <button onClick={() => navigate('/form/results')}>Submit</button>
+        <button onClick={() => navigate('/form/result')}>Submit</button>
       </section>
     </>
   )

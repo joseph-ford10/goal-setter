@@ -9,6 +9,7 @@ import Form3 from './Form3'
 import Form4 from './Form4'
 import Form5 from './Form5'
 import Summary from './Summary'
+import Result from './Result'
 
 const BookForm = () => {
   const [inputData, setInputData] = useState({
@@ -98,6 +99,16 @@ const BookForm = () => {
               path="summary"
               element={
                 <Summary inputData={inputData} targetType={targetType} />
+              }
+            />
+            <Route
+              path="result"
+              element={
+                <Result
+                  inputData={inputData}
+                  targetType={targetType}
+                  setInputData={setInputData}
+                />
               }
             />
           </Routes>

@@ -332,6 +332,42 @@ button {
     text-decoration: underline;
   }
 
+  .resultsContainer {
+    height: 22vh;
+    width: 75vw;
+    background-color:rgba(241, 246, 255, 0.7);
+    font-size: 1.06rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    border: solid white;
+    text-align: center;
+  }
+  .happyReading {
+    text-align: center;
+    font-size: 1.06rem;
+  }
+
+  .resultText {
+    margin: 20px;
+  }
+
+  .diagram {
+    display: flex;
+  }
+
+  .timeline {
+    border: solid black;
+    width: 0.01vw;
+    height: 10vh;
+    margin: 0;
+  }
+
+  .startingCircle, .finishingCircle {
+    border: solid black;
+    border-radius: 50%;
+    height: 5vh;
+    width: 11vw;
+  }
 
 /* 
   .radioButton {
