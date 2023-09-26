@@ -1,5 +1,4 @@
 import React from 'react'
-import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import Dots from './Dots'
 
@@ -11,8 +10,6 @@ const Form3 = ({
   targetType,
 }) => {
   const navigate = useNavigate()
-  const [testClick, setTestClick] = useState('no click')
-  const [clicked, setClicked] = useState(false)
 
   return (
     <>
@@ -32,7 +29,6 @@ const Form3 = ({
             onChange={(e) => {
               setTargetType('dailyTarget')
             }}
-            onClick={() => setTestClick('click1')}
           ></input>
           <label for="dailyTarget" className="radioLabel">
             I know how many pages a day I want to read.
@@ -51,7 +47,6 @@ const Form3 = ({
             onChange={(e) => {
               setTargetType('endDate')
             }}
-            onClick={() => setTestClick('click2')}
           ></input>
           <label for="endDate" className="radioLabel">
             I know the date I want to be finished by.

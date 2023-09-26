@@ -5,7 +5,6 @@ import leftArrow from './back.png'
 import bookStack from './bookStack.png'
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import TopIcon from './TopIcon'
 
 function Welcome() {
   const [carousel, setCarousel] = useState(1)

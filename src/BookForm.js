@@ -1,8 +1,6 @@
 import React from 'react'
-import { useEffect } from 'react'
 import { useState } from 'react'
 import { Route, Routes } from 'react-router-dom'
-import { useNavigate } from 'react-router-dom'
 import Form1 from './Form1'
 import Form2 from './Form2'
 import Form3 from './Form3'
@@ -20,7 +18,6 @@ const BookForm = () => {
     startDate: '',
   })
 
-  const [formProgress, setFormProgress] = useState(1)
   const [targetType, setTargetType] = useState('dailyTarget')
 
   const formText = {
