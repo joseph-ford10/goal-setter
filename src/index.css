@@ -287,6 +287,10 @@ button {
   
   }
 
+  .dateInput {
+    font-family: 'PT Serif';
+  }
+
 
 /* 
   .radioButton {

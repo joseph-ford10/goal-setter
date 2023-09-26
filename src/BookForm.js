@@ -6,6 +6,7 @@ import { useNavigate } from 'react-router-dom'
 import Form1 from './Form1'
 import Form2 from './Form2'
 import Form3 from './Form3'
+import Form4 from './Form4'
 
 const BookForm = () => {
   const [inputData, setInputData] = useState({
@@ -67,6 +68,16 @@ const BookForm = () => {
                   handleChange={handleChange}
                   inputData={inputData}
                   setTargetType={setTargetType}
+                  targetType={targetType}
+                />
+              }
+            />
+            <Route
+              path="page4"
+              element={
+                <Form4
+                  handleChange={handleChange}
+                  inputData={inputData}
                   targetType={targetType}
                 />
               }
