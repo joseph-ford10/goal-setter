@@ -6,6 +6,7 @@ const Form5 = ({ formText, inputData, handleChange, text }) => {
   const navigate = useNavigate()
   return (
     <>
+      <h2 className="welcomeMessage">Details</h2>
       <p className="formText">{text}</p>
       <div className="inputContainer">
         <input
@@ -20,7 +21,7 @@ const Form5 = ({ formText, inputData, handleChange, text }) => {
       </div>
       <Dots pageNum={5} />
       <section className="buttonContainer">
-        <button onClick={() => navigate('/form/summary')}>Hello World</button>
+        <button onClick={() => navigate('/form/summary')}>Next</button>
       </section>
     </>
   )

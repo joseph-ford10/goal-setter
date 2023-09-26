@@ -7,6 +7,7 @@ const Form4 = ({ handleChange, inputData, targetType }) => {
 
   return (
     <>
+      <h2 className="welcomeMessage">Details</h2>
       {targetType === 'dailyTarget' && (
         <p className="formText">What is your daily page target?</p>
       )}
@@ -38,7 +39,7 @@ const Form4 = ({ handleChange, inputData, targetType }) => {
       </div>
       <Dots pageNum={4} />
       <section className="buttonContainer">
-        <button onClick={() => navigate('/form/page5')}>Hello World</button>
+        <button onClick={() => navigate('/form/page5')}>Next</button>
       </section>
     </>
   )

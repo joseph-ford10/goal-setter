@@ -33,11 +33,14 @@ const Result = ({ inputData, targetType, setInputData }) => {
       <h2 className="welcomeMessage">Results</h2>
       <div className="resultsContainer">
         {targetType === 'endDate' && (
-          <p className="resultText">
-            To complete {inputData.title} by {finishedData.endDate} you'll need
-            to read {finishedData.dailyPages} pages per day, starting on{' '}
-            {finishedData.startDate}.
-          </p>
+          <>
+            <p className="resultText">
+              To complete {inputData.title} by {finishedData.endDate} you'll
+              need to read {finishedData.dailyPages} pages per day, starting on{' '}
+              {finishedData.startDate}.
+            </p>
+            <p>Happy reading!</p>
+          </>
         )}
         {targetType === 'dailyTarget' && (
           <>

@@ -7,6 +7,7 @@ const Form1 = ({ text, inputData, handleChange }) => {
 
   return (
     <>
+      <h2 className="welcomeMessage">Details</h2>
       <p className="formText">{text}</p>
       <div className="inputContainer">
         <input
@@ -20,7 +21,7 @@ const Form1 = ({ text, inputData, handleChange }) => {
       </div>
       <Dots pageNum={1} />
       <section className="buttonContainer">
-        <button onClick={() => navigate('/form/page2')}>Hello World</button>
+        <button onClick={() => navigate('/form/page2')}>Next</button>
       </section>
     </>
   )

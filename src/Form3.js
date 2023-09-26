@@ -16,6 +16,7 @@ const Form3 = ({
 
   return (
     <>
+      <h2 className="welcomeMessage">Details</h2>
       <p className="formText">{text}</p>
       <div className="radioButtons">
         <div
@@ -59,9 +60,8 @@ const Form3 = ({
       </div>
       <Dots pageNum={3} />
       <section className="buttonContainer">
-        <button onClick={() => navigate('/form/page4')}>Hello World</button>
+        <button onClick={() => navigate('/form/page4')}>Next</button>
       </section>
-      <p>{testClick}</p>
     </>
   )
 }
