@@ -5,6 +5,7 @@ import { Route, Routes } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom'
 import Form1 from './Form1'
 import Form2 from './Form2'
+import Form3 from './Form3'
 
 const BookForm = () => {
   const [inputData, setInputData] = useState({
@@ -16,12 +17,12 @@ const BookForm = () => {
   })
 
   const [formProgress, setFormProgress] = useState(1)
-  const [targetType, setTargetType] = useState('')
+  const [targetType, setTargetType] = useState('dailyTarget')
 
   const formText = {
     1: 'What is the name of the book you want to read?',
     2: `How many pages is ${inputData.title}?`,
-    3: 'Would you like to set a target end date or a daily page target?',
+    3: 'What type of target would you like to set?',
     4: 'What is your daily page target?',
     5: 'What is your target end date?',
     6: `When do you plan to start readig ${inputData.title}?`,
@@ -55,6 +56,18 @@ const BookForm = () => {
                   text={formText[2]}
                   handleChange={handleChange}
                   inputData={inputData}
+                />
+              }
+            />
+            <Route
+              path="page3"
+              element={
+                <Form3
+                  text={formText[3]}
+                  handleChange={handleChange}
+                  inputData={inputData}
+                  setTargetType={setTargetType}
+                  targetType={targetType}
                 />
               }
             />

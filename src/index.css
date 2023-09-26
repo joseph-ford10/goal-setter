@@ -256,3 +256,60 @@ button {
     text-align: center;
     font-size: 1.06rem;
   }
+
+  .radioButtons {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .radioButton {
+    width: 30vw;
+    height: 30vw;
+    border: solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 0.8rem;
+    background-color: rgba(241, 246, 255, 0.7);
+  }
+  
+  #dailyTarget, #endDate {
+    appearance: none;
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+  .radioLabel, .radioLabel {
+    margin: 20px;
+  
+  }
+
+
+/* 
+  .radioButton {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+
+  .radioButton input[type] {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #333;
+    border-radius: 4px;
+    margin-right: 10px;
+  }
+
+  .radioButton label {
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  .radioButton input {
+    background-color: #333;
+    border-color: #333;
+  } */
