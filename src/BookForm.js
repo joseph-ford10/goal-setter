@@ -7,6 +7,8 @@ import Form1 from './Form1'
 import Form2 from './Form2'
 import Form3 from './Form3'
 import Form4 from './Form4'
+import Form5 from './Form5'
+import Summary from './Summary'
 
 const BookForm = () => {
   const [inputData, setInputData] = useState({
@@ -26,7 +28,7 @@ const BookForm = () => {
     3: 'What type of target would you like to set?',
     4: 'What is your daily page target?',
     5: 'What is your target end date?',
-    6: `When do you plan to start readig ${inputData.title}?`,
+    6: `When do you plan to start reading ${inputData.title}?`,
   }
 
   const handleChange = (e) => {
@@ -80,6 +82,22 @@ const BookForm = () => {
                   inputData={inputData}
                   targetType={targetType}
                 />
+              }
+            />
+            <Route
+              path="page5"
+              element={
+                <Form5
+                  text={formText[6]}
+                  handleChange={handleChange}
+                  inputData={inputData}
+                />
+              }
+            />
+            <Route
+              path="summary"
+              element={
+                <Summary inputData={inputData} targetType={targetType} />
               }
             />
           </Routes>

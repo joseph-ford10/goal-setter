@@ -291,6 +291,47 @@ button {
     font-family: 'PT Serif';
   }
 
+  .summaryContainer {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .summaryRow {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100vw;
+    margin-bottom: 2rem;
+  }
+
+  .summaryBox {
+    border: solid white;
+    width: 35vw;
+    height: 35vw;
+    font-size: 1.06rem;
+    text-align: center;
+    align-items: center;
+    position: relative;
+    background-color: rgba(241, 246, 255, 0.7);
+    border-radius: 10px;
+  }
+
+  h3 {
+    margin: 0;
+  }
+
+  .editButton {
+    position: absolute;
+    bottom: 5%;
+    margin: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    border: none;
+    text-decoration: underline;
+  }
+
 
 /* 
   .radioButton {
