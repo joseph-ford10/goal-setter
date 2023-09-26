@@ -369,6 +369,11 @@ button {
     width: 11vw;
   }
 
+  .formDots {
+    display: flex;
+    justify-content: center;
+  }
+
 /* 
   .radioButton {
     display: flex;

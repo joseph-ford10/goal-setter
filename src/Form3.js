@@ -1,6 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
+import Dots from './Dots'
 
 const Form3 = ({
   text,
@@ -56,6 +57,7 @@ const Form3 = ({
           </label>
         </div>
       </div>
+      <Dots pageNum={3} />
       <section className="buttonContainer">
         <button onClick={() => navigate('/form/page4')}>Hello World</button>
       </section>

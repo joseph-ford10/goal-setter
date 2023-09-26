@@ -1,5 +1,6 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
+import Dots from './Dots'
 
 const Form5 = ({ formText, inputData, handleChange, text }) => {
   const navigate = useNavigate()
@@ -17,6 +18,7 @@ const Form5 = ({ formText, inputData, handleChange, text }) => {
           className="dateInput"
         ></input>
       </div>
+      <Dots pageNum={5} />
       <section className="buttonContainer">
         <button onClick={() => navigate('/form/summary')}>Hello World</button>
       </section>
