@@ -1,5 +1,4 @@
 import React from 'react'
-import MenuIcon from './MenuIcon'
 
 function Header() {
   return (
